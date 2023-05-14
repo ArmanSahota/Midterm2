@@ -1,0 +1,24 @@
+﻿<Window x:Class="Midterm2.MemberPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm2"
+        mc:Ignorable="d"
+        Title="MemberPage" Height="450" Width="800">
+    <Grid Background="#FF6D3F75">
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="63,56,0,0" VerticalAlignment="Top" Width="133" Foreground="White" FontSize="16"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="63,119,0,0" VerticalAlignment="Top" Width="133" Foreground="White" FontSize="16"/>
+        <Label Content="Transaction History" HorizontalAlignment="Left" Margin="602,86,0,0" VerticalAlignment="Top" Width="163" Foreground="White" FontSize="16"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="33" Margin="63,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="33" Margin="63,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <Button x:Name="AddMemberBtn" Content="Add Members" HorizontalAlignment="Left" Height="44" Margin="59,365,0,0" VerticalAlignment="Top" Width="183" Click="AddMemberBtn_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="99" Margin="63,229,0,0" VerticalAlignment="Top" Width="183" Background="#FF3B1C42"/>
+        <Label Content="Membership Type" HorizontalAlignment="Left" Margin="63,207,0,0" VerticalAlignment="Top" Width="151" Foreground="White" FontSize="16"/>
+        <RadioButton x:Name="RegMembership" Content="Regular member" HorizontalAlignment="Left" Height="24" Margin="85,243,0,0" VerticalAlignment="Top" Width="107" Checked="RadioButton_Checked" Foreground="White"/>
+        <RadioButton x:Name="GoldMembership" Content="Gold member" HorizontalAlignment="Left" Height="24" Margin="85,278,0,0" VerticalAlignment="Top" Width="107" Foreground="White"/>
+        <ListBox x:Name="MemberList" HorizontalAlignment="Left" Height="337" Margin="273,56,0,0" VerticalAlignment="Top" Width="291" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="MemberList_SelectionChanged"/>
+        <ListBox x:Name="TransactionHistory" HorizontalAlignment="Left" Height="270" Margin="595,124,0,0" VerticalAlignment="Top" Width="170" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+    </Grid>
+</Window>
